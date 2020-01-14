@@ -46,9 +46,7 @@ var point = 0;
 
    if (checkArrayNumber(numberArray, triesUser) == true) {
      console.log('Hai perso');
-   } else if (triesUser > maxTries) {
-     console.log('Hai vinto');
-   }
+   } 
 
    //  se invece nell'array con i numeri random del pc non è presente il numero inserito dall'utente aggiungo il numero dell'utente su l'array con i tentativi, aggiungendo + 1 alla variabile point
 
