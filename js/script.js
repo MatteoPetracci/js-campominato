@@ -42,8 +42,19 @@ var point = 0;
 
  while (tries.length < maxTries && checkArrayNumber(numberArray, triesUser) == false) {
     var triesUser = parseInt(prompt('Scrivi un numero da 1 a 100!'));
-   // controllo che sia una bomba
+   // controllo che se il numero inserito dall'utente  è incluso nell'array con i numeri generati random il giocatore ha perso
+
    if (checkArrayNumber(numberArray, triesUser) == true) {
      console.log('Hai perso');
    }
+
+   //  se invece non è inserito
+
+   if (numberArray.includes(triesUser) == false) {
+    tries.push(triesUser);
+    point = point + 1;
+   }
+   console.log(point);
+
+
  }
