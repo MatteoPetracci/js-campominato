@@ -31,7 +31,17 @@ while (userNumber.length < userTries && findNumber == false) {
   } else {
     point = point + 1;
   }
+// richiamare la funzione che controlla se il numero inserito è dentro all'array usernumber
+// se non è inserito lo inserisce se invece è già stato inserito mandiamo un alert chiedendo di ripetere il numero
+
+  if (checkArrayNumber(userNumber, promptUser) == false) {
+    userNumber.push(promptUser);
+    // console.log(userNumber);
+  } else if (checkArrayNumber(userNumber, promptUser) == true) {
+    alert('Hai gia inserito questo numero');
+  }
 }
+
 console.log('Hai totalizzato il punteggio di' + ' ' + point);
 
  // Creare una funzione per generare un numero random con min e max compreso
@@ -52,38 +62,3 @@ console.log('Hai totalizzato il punteggio di' + ' ' + point);
    }
    return false;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
- //
- // //  dichiarare una variabile con i tentativi massimi che l'utente può utilizzare
- // var maxTries = 84;
- //
- //  while (tries.length < maxTries && checkArrayNumber(numberArray, triesUser) == false) {
-   //     var triesUser = parseInt(prompt('Scrivi un numero da 1 a 100!'));
-   //    // controllo che se il numero inserito dall'utente  è incluso nell'array con i numeri generati random il giocatore ha perso
-   //
-   //    if (checkArrayNumber(numberArray, triesUser) == true) {
-     //      console.log('Hai perso');
-     //    }
-     //
-     //    //  se invece nell'array con i numeri random del pc non è presente il numero inserito dall'utente aggiungo il numero dell'utente su l'array con i tentativi, aggiungendo + 1 alla variabile point
-     //
-     //    if (numberArray.includes(triesUser) == false) {
-       //     tries.push(triesUser);
-       //     point = point + 1;
-       //   }
-       //    console.log(point);
-       //    console.log(tries);
-       //
-       //  }
