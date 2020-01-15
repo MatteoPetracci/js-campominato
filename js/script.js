@@ -28,8 +28,11 @@ while (userNumber.length < userTries && findNumber == false) {
   if (checkArrayNumber(numberArray, promptUser) == true) {
     findNumber = true;
     console.log('Hai perso');
+  } else {
+    point = point + 1;
   }
 }
+console.log('Hai totalizzato il punteggio di' + ' ' + point);
 
  // Creare una funzione per generare un numero random con min e max compreso
 
