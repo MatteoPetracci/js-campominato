@@ -14,13 +14,22 @@ while (numberArray.length < 16) {
 console.log(numberArray);
 
 // creare un array vuoto dove inserire i numeri dell'utente
-var userNumber[];
-
+var userNumber = [];
 //  creare una variabile per il numero di tentativi dell'utente
-var userTries;
+var userTries = 84;
 //  dichiarare una variabile che contenga il punteggio dell'utente
 var point = 0;
-
+var findNumber = false;
+// lunghezza dell'array è minore al numero massimo di tentativi e findnumber ha valore false
+// utilizzare la funzione per dire se i numeri inseriti dall'utente sono contenuti nell'array con i numeri generati dal pc
+// se si ha perso
+while (userNumber.length < userTries && findNumber == false) {
+  var promptUser = parseInt(prompt(' Inserisci un numero da 1 a 100'));
+  if (checkArrayNumber(numberArray, promptUser) == true) {
+    findNumber = true;
+    console.log('Hai perso');
+  }
+}
 
  // Creare una funzione per generare un numero random con min e max compreso
 
@@ -40,30 +49,6 @@ var point = 0;
    }
    return false;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
